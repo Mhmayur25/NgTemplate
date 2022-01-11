@@ -1,0 +1,45 @@
+
+
+<mat-drawer-container class="example-container" hasBackdrop="true">
+    <mat-drawer #drawer position="end" mode="over">
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12"><h3>Background Color</h3></div>
+                <div  class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-2" *ngFor="let _color of bgColors">
+                    <div class="card p-4 mat-elevation-z6" [ngStyle]="{background: _color}" (click)="bgTheme = _color"></div>
+                </div>
+            </div>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+
+        
+<div class="container-fluid" [ngStyle]="{background: bgTheme}">
+    <mat-toolbar class="bg-transparent">    
+       <span class="right-spacer"></span>
+       <button mat-icon-button class="mr-5" aria-label="Example icon-button with share icon" (click)="drawer.toggle()">
+        <mat-icon class="material-icons-outlined">settings</mat-icon>
+      </button>
+     </mat-toolbar>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-12 col-lg-12 col-xl-12 col-md-12  mt-5 text-center">
+                <h1>App Name</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-12 col-lg-12 col-xl-12 col-md-12 mt-2 mx-auto my-auto">
+                        <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+
+      
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+
+

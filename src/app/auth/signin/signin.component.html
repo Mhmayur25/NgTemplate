@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto my-auto">
+        <div class="card mat-elevation-z7 p-5">
+            <div class="card-body">
+                <div class="row">
+                    <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <mat-label>Username</mat-label>
+                        <input matInput type="text" [(ngModel)]="authDetails.username">
+                      </mat-form-field>
+                    <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="{{inputType}}" [(ngModel)]="authDetails.password">
+                        <button *ngIf="authDetails.password" matSuffix mat-icon-button aria-label="Clear" (click)="toggleInput()">
+                          <mat-icon class="material-icons-outlined">{{inputIcon}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+                      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-2">
+                        <button mat-raised-button class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-2" color="primary">Sign-in</button>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4 text-right">
+                        
+                            <a>Forgot Password?</a>
+                        
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
