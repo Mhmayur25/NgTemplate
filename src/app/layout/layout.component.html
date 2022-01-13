@@ -1,1 +1,63 @@
-<p>layout works!</p>
+
+
+
+
+
+<mat-drawer-container hasBackdrop="true">
+    <mat-drawer #drawer mode="over" class="pt-2 pb-2 drawer-wrapper">
+        <app-navigation *ngFor="let item of menuList" [item]="item"></app-navigation>
+    </mat-drawer>
+    <mat-drawer #drawer_notifications mode="over"  position="end" class="p-3 drawer-wrapper" >  NOTIFICATIOSN DRAWER...!</mat-drawer>
+    <mat-drawer-content>
+
+        <mat-toolbar color="primary" style="position: fixed;">
+            <mat-toolbar-row class="mat-elevation-z6">
+                <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
+                    <mat-icon>menu</mat-icon>
+                  </button>
+                <span>My App</span>
+              <span class="toolbar-icon-spacer"></span>
+              <mat-icon> light_mode </mat-icon>
+              <mat-slide-toggle [(ngModel)]="isDarkMode" (change)="switchTheme()">
+               
+               </mat-slide-toggle>
+              <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"  (click)="drawer_notifications.toggle()">
+                <mat-icon matBadge="1500" matBadgeColor="warn" matBadgeSize="small">notifications</mat-icon>
+              </button>
+              <button mat-icon-button class="example-icon favorite-icon" [matMenuTriggerFor]="menu_user_account" aria-label="Example icon-button with heart icon">
+                <mat-icon>account_circle</mat-icon>
+              </button>
+
+              <mat-menu #menu_user_account="matMenu">
+
+                <mat-list>
+                    <mat-list-item>
+                      <mat-icon mat-list-icon>portrait</mat-icon>
+                      <div mat-line>Profile</div>
+                    </mat-list-item>
+                    <mat-list-item>
+                      <mat-icon mat-list-icon>logout</mat-icon>
+                      <div mat-line>Sign-out</div>
+                    </mat-list-item>
+                    </mat-list>
+              </mat-menu>
+
+            </mat-toolbar-row>
+        
+            <mat-toolbar-row class="d-flex flex-row-reverse" >
+              <span class="p-5"> {{breadcrumb}}</span>
+            </mat-toolbar-row>
+          </mat-toolbar>
+
+        <div class="mt-5 pt-5">
+            <router-outlet></router-outlet>
+        </div>
+            
+        
+ 
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
+
+ 

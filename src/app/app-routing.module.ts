@@ -15,6 +15,17 @@ const routes: Routes = [
       .then(m => m.AuthModule),
       }
     ]
+  },
+  {
+    path:'authenticated',
+    component:LayoutComponent,
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./main/main.module')
+      .then(m => m.MainModule),
+      }
+    ]
   }
 
 ];
