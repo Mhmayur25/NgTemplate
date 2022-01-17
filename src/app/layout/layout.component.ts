@@ -31,12 +31,24 @@ export class LayoutComponent implements OnInit, AfterViewInit {
   ngOnInit(): void { 
 
     this.menuList = this._MenuListService.loadMenu('admin');
+    this.getCurrentBreadcrumb();
   }
   
   ngAfterViewInit(): void {
-    
+   
   }
 
+
+  getCurrentBreadcrumb()
+  {
+    var filteredList =  this.menuList.filter((val)=>{
+      return val.route ==  this.router.url;
+    });
+    if(filteredList != undefined && filteredList.length >0)
+    {
+      this.breadcrumb = filteredList[0].pageTitle;
+    }
+  }
 
   switchTheme()
   {

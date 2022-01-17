@@ -1,0 +1,39 @@
+.section-1 {
+    min-height: 100%;
+    height: auto;
+}
+.overflow
+{
+    overflow: auto;
+}
+
+.counter
+{
+    color: #E7E7E7;
+}
+
+.card-1
+{
+    background:  linear-gradient(to right, #00d2ff, #928dab, transparent) no-repeat;
+}
+.card-2
+{
+    background:  linear-gradient(to right, #eb3349, #f45c43, transparent) no-repeat;
+}
+.card-3
+{
+    background:  linear-gradient(to right, #ff8008, #ffc837, transparent) no-repeat;
+}
+.card-4
+{
+    background:  linear-gradient(to right, #11998e, #38ef7d, transparent) no-repeat;
+}
+.card-5
+{
+    background:  linear-gradient(to right, #7f00ff, #e100ff, transparent) no-repeat;
+}
+
+.apexcharts-text,.apexcharts-yaxis-label 
+.apexcharts-xaxistooltip, .apexcharts-yaxis {
+    color: #fff !important;
+  }

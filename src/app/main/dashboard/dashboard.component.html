@@ -1,7 +1,79 @@
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 mb-3">
     <div class="wrapper">
         <div class="row">
-            <h1>Dashboard loads....!</h1>
+            <div class="col-12 col-sm-12 col-lg-8 col-md-12 col-xl-8 col-xxl-8 p-2 card-column ">
+                <mat-card class="section-1" id="chart">
+                    <mat-card-subtitle>Monthly Income</mat-card-subtitle>
+                    
+                        <apx-chart class="mat-card mat-focus-indicator"
+                          [series]="chartOptions.series"
+                          [chart]="chartOptions.chart"
+                          [dataLabels]="chartOptions.dataLabels"
+                          [plotOptions]="chartOptions.plotOptions"
+                          [yaxis]="chartOptions.yaxis"
+                          [legend]="chartOptions.legend"
+                          [fill]="chartOptions.fill"
+                          [stroke]="chartOptions.stroke"
+                          [tooltip]="chartOptions.tooltip"
+                          [xaxis]="chartOptions.xaxis"
+                        ></apx-chart>
+                     
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-4 col-md-12 col-xl-4 col-xxl-4 p-2">
+                <mat-card class="section-1" id="radialBarChart">
+                    <mat-card-subtitle>Daily types of dilevary</mat-card-subtitle>
+                    
+                        <apx-chart class="mat-card mat-focus-indicator"
+                          [series]="RadialBarChartOptions.series"
+                          [chart]="RadialBarChartOptions.chart"
+                          [plotOptions]="RadialBarChartOptions.plotOptions"
+                          [labels]="RadialBarChartOptions.labels"
+                          [legend]="RadialBarChartOptions.legend"
+                          [colors]="RadialBarChartOptions.colors"
+                          [responsive]="RadialBarChartOptions.responsive"
+                        ></apx-chart>
+                      
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-12 col-lg-6 col-md-6 col-xl-6 col-xxl-6">
+                
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-2">
+                        <mat-card class="p-5 counter card-1 text-right">
+                                <mat-card-title>Basic card</mat-card-title>
+                          </mat-card>
+                          </div>
+
+                          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-2">
+                        <mat-card class="p-5 counter card-2 text-right">
+                                <mat-card-title>Basic card</mat-card-title>
+                          </mat-card>
+                          </div>
+
+                          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-2">
+                        <mat-card class="p-5 counter card-3 text-right">
+                                <mat-card-title>Basic card</mat-card-title>
+                          </mat-card>
+                          </div>
+
+                          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-2">
+                        <mat-card class="p-5 counter card-4 text-right">
+                                <mat-card-title>Basic card</mat-card-title>
+                          </mat-card>
+                          </div>
+
+                          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mt-2">
+                        <mat-card class="p-5 counter card-5 text-right">
+                                <mat-card-title>Basic card</mat-card-title>
+                          </mat-card>
+                          </div>
+                    </div>
+              
+            </div>
+            <div class="col-12 col-sm-12 col-lg-6 col-md-6 col-xl-6 col-xxl-6 p-2">
+                <mat-card>Simple card</mat-card>
+            </div>
         </div>
     </div>
         
